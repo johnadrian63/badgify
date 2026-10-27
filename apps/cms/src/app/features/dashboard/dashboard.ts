@@ -1,9 +1,9 @@
 import { Component, OnInit, signal, WritableSignal } from "@angular/core";
-import { UiTable } from "@org/table-builder";
+import { TableBuilder } from "@org/table-builder";
 
 @Component({
     selector: "app-dashboard",
-    imports: [UiTable],
+    imports: [TableBuilder],
     templateUrl: "./dashboard.html",
     styleUrl: "./dashboard.css",
 })

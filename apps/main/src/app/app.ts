@@ -1,10 +1,10 @@
 import { Component } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { NxWelcome } from "./nx-welcome";
-import { UiForm } from "@org/form-engine";
+import { FormEngine } from "@org/form-engine";
 
 @Component({
-    imports: [NxWelcome, RouterModule, UiForm],
+    imports: [NxWelcome, RouterModule, FormEngine],
     selector: "app-root",
     templateUrl: "./app.html",
     styleUrl: "./app.scss",

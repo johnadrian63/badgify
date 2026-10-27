@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { UiForm } from "./ui-form";
+import { FormEngine } from "./form-engine";
 
 describe("UiForm", () => {
-    let component: UiForm;
-    let fixture: ComponentFixture<UiForm>;
+    let component: FormEngine;
+    let fixture: ComponentFixture<FormEngine>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [UiForm],
+            imports: [FormEngine],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(UiForm);
+        fixture = TestBed.createComponent(FormEngine);
         component = fixture.componentInstance;
         await fixture.whenStable();
     });
