@@ -17,13 +17,29 @@ export default [
                     allow: ["^.*/eslint(\\.base)?\\.config\\.[cm]?[jt]s$"],
                     depConstraints: [
                         {
-                            sourceTag: "*",
-                            onlyDependOnLibsWithTags: ["*"],
+                            sourceTag: "type:util",
+                            onlyDependOnLibsWithTags: ["type:util"],
+                        },
+                        {
+                            sourceTag: "type:feature",
+                            onlyDependOnLibsWithTags: ["type:util"],
                         },
                     ],
                 },
             ],
             "@typescript-eslint/no-inferrable-types": "off",
+            "no-restricted-imports": [
+                "error",
+                {
+                    patterns: [
+                        {
+                            group: ["@org/*/*"],
+                            message:
+                                "Import from the library's public API instead of its internal files.",
+                        },
+                    ],
+                },
+            ],
         },
     },
     {
