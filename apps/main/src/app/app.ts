@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NxWelcome } from './nx-welcome';
+import { UiForm } from "@org/ui-form";
 
 @Component({
-  imports: [NxWelcome, RouterModule],
-  selector: 'app-root',
-  templateUrl: './app.html',
-  styleUrl: './app.scss',
+    imports: [
+        NxWelcome,
+        RouterModule,
+        UiForm
+    ],
+    selector: 'app-root',
+    templateUrl: './app.html',
+    styleUrl: './app.scss',
 })
 export class App {
-  protected title = 'client';
+    protected title = 'client';
 }
