@@ -4,7 +4,7 @@ import angular from "@analogjs/vite-plugin-angular";
 
 export default defineConfig(() => ({
     root: import.meta.dirname,
-    cacheDir: "../../node_modules/.vite/libs/ui-form",
+    cacheDir: "../../node_modules/.vite/libs/table-builder",
     resolve: {
         tsconfigPaths: true,
     },
@@ -14,7 +14,7 @@ export default defineConfig(() => ({
     //  plugins: [],
     // },
     test: {
-        name: "ui-form",
+        name: "table-builder",
         watch: false,
         globals: true,
         environment: "jsdom",
@@ -24,7 +24,7 @@ export default defineConfig(() => ({
         setupFiles: ["src/test-setup.ts"],
         reporters: ["default"],
         coverage: {
-            reportsDirectory: "../../coverage/libs/ui-form",
+            reportsDirectory: "../../coverage/libs/table-builder",
             provider: "v8" as const,
         },
     },

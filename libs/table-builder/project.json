@@ -1,10 +1,10 @@
 {
-    "name": "ui-form",
+    "name": "table-builder",
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "libs/ui-form/src",
+    "sourceRoot": "libs/table-builder/src",
     "prefix": "lib",
     "projectType": "library",
     "tags": [],
-    "// targets": "to see all targets run: nx show project ui-form --web",
+    "// targets": "to see all targets run: nx show project table-builder --web",
     "targets": {}
 }
