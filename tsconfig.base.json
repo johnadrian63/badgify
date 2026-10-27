@@ -21,7 +21,8 @@
         "types": ["*"],
         "paths": {
             "@org/form-engine": ["./libs/form-engine/src/index.ts"],
-            "@org/table-builder": ["./libs/table-builder/src/index.ts"]
+            "@org/table-builder": ["./libs/table-builder/src/index.ts"],
+            "@org/test-lib": ["./libs/test-lib/src/index.ts"]
         }
     }
 }
