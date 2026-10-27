@@ -5,7 +5,9 @@
         "emitDeclarationOnly": false,
         "importHelpers": true,
         "isolatedModules": true,
-        "lib": ["es2022"],
+        "lib": [
+            "es2022"
+        ],
         "module": "nodenext",
         "moduleResolution": "nodenext",
         "noEmitOnError": true,
@@ -16,13 +18,12 @@
         "skipLibCheck": true,
         "strict": true,
         "target": "es2022",
-        "customConditions": ["@org/source"],
+        "customConditions": [
+            "@org/source"
+        ],
         "noUncheckedSideEffectImports": false,
-        "types": ["*"],
-        "paths": {
-            "@org/form-engine": ["./libs/form-engine/src/index.ts"],
-            "@org/table-builder": ["./libs/table-builder/src/index.ts"],
-            "@org/test-lib": ["./libs/test-lib/src/index.ts"]
-        }
+        "types": [
+            "*"
+        ]
     }
 }
