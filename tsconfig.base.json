@@ -20,7 +20,8 @@
         "noUncheckedSideEffectImports": false,
         "types": ["*"],
         "paths": {
-            "@org/ui-form": ["./libs/ui-form/src/index.ts"]
+            "@org/form-engine": ["./libs/form-engine/src/index.ts"],
+            "@org/table-builder": ["./libs/table-builder/src/index.ts"]
         }
     }
 }

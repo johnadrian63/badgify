@@ -6,4 +6,4 @@ import { Component } from "@angular/core";
     templateUrl: "./ui-form.html",
     styleUrl: "./ui-form.css",
 })
-export class UiForm { }
+export class UiForm {}

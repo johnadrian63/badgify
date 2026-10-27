@@ -1,0 +1,10 @@
+{
+    "name": "form-engine",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "libs/form-engine/src",
+    "prefix": "lib",
+    "projectType": "library",
+    "tags": [],
+    "// targets": "to see all targets run: nx show project form-engine --web",
+    "targets": {}
+}
