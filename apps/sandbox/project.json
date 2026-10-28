@@ -4,11 +4,15 @@
     "projectType": "application",
     "prefix": "app",
     "sourceRoot": "apps/sandbox/src",
-    "tags": [],
+    "tags": [
+        "type:app"
+    ],
     "targets": {
         "build": {
             "executor": "@angular/build:application",
-            "outputs": ["{options.outputPath}"],
+            "outputs": [
+                "{options.outputPath}"
+            ],
             "defaultConfiguration": "production",
             "options": {
                 "outputPath": "dist/apps/sandbox",
@@ -21,7 +25,9 @@
                         "input": "apps/sandbox/public"
                     }
                 ],
-                "styles": ["apps/sandbox/src/styles.scss"]
+                "styles": [
+                    "apps/sandbox/src/styles.scss"
+                ]
             },
             "configurations": {
                 "production": {
@@ -73,7 +79,9 @@
             "readyWhen": {
                 "signal": true
             },
-            "dependsOn": ["build"],
+            "dependsOn": [
+                "build"
+            ],
             "executor": "@nx/web:file-server",
             "options": {
                 "buildTarget": "sandbox:build",

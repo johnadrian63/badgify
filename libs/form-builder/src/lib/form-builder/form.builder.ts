@@ -1,9 +1,26 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
+import { FormGroup, ReactiveFormsModule } from "@angular/forms";
+
+import { FormBuilderAbstract } from "./form.builder.abstract";
+import { FormBuilderService } from "./form.builder.service";
 
 @Component({
     selector: "lib-form-builder",
-    imports: [],
     templateUrl: "./form.builder.html",
-    styleUrl: "./form.builder.css",
+    imports: [
+        ReactiveFormsModule
+    ]
 })
-export class FormBuilder { }
+export class FormBuilder extends FormBuilderAbstract {
+
+    public get formGroup(): FormGroup {
+        return this.formBuilderService.formGroup;
+    }
+
+    private readonly formBuilderService: FormBuilderService = inject(FormBuilderService);
+
+
+    public override submit(): void {
+        this.formBuilderService.submit();
+    }
+}
