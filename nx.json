@@ -74,6 +74,15 @@
         "@nx/angular:component": {
             "style": "css"
         },
+        "@nx/angular:service": {
+            "typeSeparator": "."
+        },
+        "@nx/angular:pipe": {
+            "typeSeparator": "."
+        },
+        "@nx/angular:directive": {
+            "typeSeparator": "."
+        },
         "@nx/angular:library": {
             "linter": "eslint",
             "unitTestRunner": "vitest-analog"
