@@ -1,12 +1,12 @@
 import { Route } from "@angular/router";
 
-import { formBuilderRoutes } from "./features/form-builder/form.builder.routes";
+import { formRoutes } from "./features/form/form.routes";
 
 export const appRoutes: Route[] = [
     {
-        path: "form-builder",
+        path: "form",
         children: [
-            ...formBuilderRoutes,
+            ...formRoutes,
         ]
     }
 ];
