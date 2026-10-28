@@ -3,17 +3,16 @@ import { ActivatedRoute, Data, NavigationEnd, Router } from "@angular/router";
 import { filter, map, mergeMap } from "rxjs";
 
 @Component({
-    template: ""
+    template: "",
 })
 export class LayoutAbstract implements OnInit {
     private readonly activatedRoute: ActivatedRoute = inject(ActivatedRoute);
     private readonly router: Router = inject(Router);
 
     public ngOnInit(): void {
-        this.router
-            .events
+        this.router.events
             .pipe(
-                filter(event => event instanceof NavigationEnd),
+                filter((event) => event instanceof NavigationEnd),
                 map(() => this.activatedRoute),
                 map((route: ActivatedRoute) => {
                     while (route.firstChild) {
@@ -25,8 +24,9 @@ export class LayoutAbstract implements OnInit {
                 filter((route: ActivatedRoute) => {
                     return ["primary"].includes(route.outlet);
                 }),
-                mergeMap(route => route.data)
-            ).subscribe((data: Data) => {
+                mergeMap((route) => route.data),
+            )
+            .subscribe((data: Data) => {
                 console.log(data);
             });
     }

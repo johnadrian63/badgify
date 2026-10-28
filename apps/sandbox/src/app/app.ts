@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { RouterModule } from "@angular/router";
-import { LayoutAbstract } from "@org/layout"
+import { LayoutAbstract } from "@org/layout-builder";
 
 @Component({
     imports: [RouterModule],

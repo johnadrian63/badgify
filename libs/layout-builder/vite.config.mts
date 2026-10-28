@@ -24,7 +24,7 @@ export default defineConfig(() => ({
         setupFiles: ["src/test-setup.ts"],
         reporters: ["default"],
         coverage: {
-            reportsDirectory: "../../coverage/libs/layout",
+            reportsDirectory: "../../coverage/libs/layout-builder",
             provider: "v8" as const,
         },
     },
