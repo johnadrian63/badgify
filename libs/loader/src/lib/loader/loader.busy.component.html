@@ -1,0 +1,11 @@
+@if (busySubscription) {
+    @if (showOverlay) {
+        <div
+            class="absolute bg-white opacity-50 h-full w-full z-40 border"
+        ></div>
+    }
+    <lib-loader-spinner-component
+        [spinnerSize]="spinnerSize"
+        [spinnerColor]="spinnerColor"
+    ></lib-loader-spinner-component>
+}

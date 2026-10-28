@@ -5,9 +5,7 @@
         "emitDeclarationOnly": false,
         "importHelpers": true,
         "isolatedModules": true,
-        "lib": [
-            "es2022"
-        ],
+        "lib": ["es2022"],
         "module": "nodenext",
         "moduleResolution": "nodenext",
         "noEmitOnError": true,
@@ -18,29 +16,18 @@
         "skipLibCheck": true,
         "strict": true,
         "target": "es2022",
-        "customConditions": [
-            "@org/source"
-        ],
+        "customConditions": ["@org/source"],
         "noUncheckedSideEffectImports": false,
-        "types": [
-            "*"
-        ],
+        "types": ["*"],
         "paths": {
-            "@org/test-lib1": [
-                "./libs/test-lib1/src/index.ts"
-            ],
-            "@org/test-lib2": [
-                "./libs/test-lib2/src/index.ts"
-            ],
-            "@org/form-builder": [
-                "./libs/form-builder/src/index.ts"
-            ],
-            "@org/context-builder": [
-                "./libs/context-builder/src/index.ts"
-            ],
-            "@org/layout-builder": [
-                "./libs/layout-builder/src/index.ts"
-            ]
+            "@org/test-lib1": ["./libs/test-lib1/src/index.ts"],
+            "@org/test-lib2": ["./libs/test-lib2/src/index.ts"],
+            "@org/form-builder": ["./libs/form-builder/src/index.ts"],
+            "@org/context-builder": ["./libs/context-builder/src/index.ts"],
+            "@org/layout-builder": ["./libs/layout-builder/src/index.ts"],
+            "@org/common": ["./libs/common/src/index.ts"],
+            "@org/ui": ["./libs/ui/src/index.ts"],
+            "@org/loader": ["./libs/loader/src/index.ts"]
         }
     }
 }

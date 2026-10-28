@@ -1,0 +1,7 @@
+:host {
+    @apply inline-block;
+
+    .ui-button {
+        @apply w-full rounded shadow py-2 px-3 font-medium;
+    }
+}

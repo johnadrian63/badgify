@@ -1,0 +1,11 @@
+<button
+    type="button"
+    [ngClass]="classes"
+    [libLoaderButtonDirective]="busySubscription"
+    [spinnerColor]="spinnerColor"
+    [disabled]="disabled"
+    [class.disabled:opacity-60]="disabled"
+    class="ui-button"
+>
+    <ng-content></ng-content>
+</button>
