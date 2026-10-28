@@ -1,5 +1,6 @@
 import { Component, inject } from "@angular/core"
 import { FormBuilder, FormBuilderController, FormBuilderService } from "@org/form-builder";
+import { UiButtonComponent } from "@org/ui"
 
 import { UserFormBuilderService } from "./user.form.builder.service";
 
@@ -8,7 +9,8 @@ import { UserFormBuilderService } from "./user.form.builder.service";
     templateUrl: "./user.form.builder.html",
     styleUrl: "./user.form.builder.css",
     imports: [
-        FormBuilder
+        FormBuilder,
+        UiButtonComponent
     ],
     providers: [
         {

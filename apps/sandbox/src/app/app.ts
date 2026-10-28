@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { RouterModule } from "@angular/router";
-import { LayoutAbstract } from "@org/layout-builder";
+import { LayoutBuilder } from "@org/layout-builder";
 
 @Component({
     imports: [RouterModule],
@@ -8,6 +8,6 @@ import { LayoutAbstract } from "@org/layout-builder";
     templateUrl: "./app.html",
     styleUrl: "./app.scss",
 })
-export class App extends LayoutAbstract {
+export class App extends LayoutBuilder {
     protected title = "sandbox";
 }

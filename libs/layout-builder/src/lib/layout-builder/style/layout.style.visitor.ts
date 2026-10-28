@@ -13,7 +13,7 @@ import { LayoutStyleAdapterAbstract } from "./adapter/layout.style.adapter.abstr
 import {
     LayoutBodyBackgroundMode,
     layoutBodyClassMapper
-} from "../layout.body.class.mapper";
+} from "./layout.body.class.mapper";
 
 export const layoutStyleAdapterMapper: Map<keyof typeof LayoutStyle, Type<LayoutStyleAdapterAbstract>> = new Map<keyof typeof LayoutStyle, Type<LayoutStyleAdapterAbstract>>([
     [LayoutStyle.NO_LAYOUT, LayoutStyleAdapterNoLayout],
@@ -36,7 +36,7 @@ export class LayoutStyleVisitor implements ILayoutStyleVisitor {
         private readonly document: Document,
         data: Data
     ) {
-        const backgroundMode = this.getBackgroundMode(data.bodyBackgroundMode)
+        const backgroundMode = this.getBackgroundMode(data["bodyBackgroundMode"])
 
         if (backgroundMode) {
             this.renderer.addClass(this.document.body, backgroundMode);
@@ -67,6 +67,8 @@ export class LayoutStyleVisitor implements ILayoutStyleVisitor {
     }
 
     private getBackgroundMode(backgroundMode: LayoutBodyBackgroundMode): string {
-        return layoutBodyClassMapper.has(backgroundMode) === true ? layoutBodyClassMapper.get(backgroundMode) : "";
+        const layoutBodyClass = layoutBodyClassMapper.get(backgroundMode);
+
+        return layoutBodyClass ?? "";
     }
 }

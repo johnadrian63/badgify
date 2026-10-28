@@ -5,7 +5,7 @@ import { filter, map, mergeMap } from "rxjs";
 @Component({
     template: "",
 })
-export abstract class LayoutBuilderAbstract implements OnInit {
+export abstract class LayoutBuilder implements OnInit {
     private readonly activatedRoute: ActivatedRoute = inject(ActivatedRoute);
     private readonly router: Router = inject(Router);
 
