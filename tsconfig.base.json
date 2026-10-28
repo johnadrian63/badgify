@@ -22,7 +22,8 @@
         "paths": {
             "@org/test-lib1": ["./libs/test-lib1/src/index.ts"],
             "@org/test-lib2": ["./libs/test-lib2/src/index.ts"],
-            "@org/form-builder": ["./libs/form-builder/src/index.ts"]
+            "@org/form-builder": ["./libs/form-builder/src/index.ts"],
+            "@org/layout": ["./libs/layout/src/index.ts"]
         }
     }
 }
