@@ -20,9 +20,9 @@
         "noUncheckedSideEffectImports": false,
         "types": ["*"],
         "paths": {
-            "@org/form-engine": ["./libs/form-engine/src/index.ts"],
-            "@org/table-builder": ["./libs/table-builder/src/index.ts"],
-            "@org/test-lib": ["./libs/test-lib/src/index.ts"]
+            "@org/test-lib1": ["./libs/test-lib1/src/index.ts"],
+            "@org/test-lib2": ["./libs/test-lib2/src/index.ts"],
+            "@org/form-builder": ["./libs/form-builder/src/index.ts"]
         }
     }
 }

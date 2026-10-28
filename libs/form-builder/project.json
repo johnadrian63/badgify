@@ -1,0 +1,12 @@
+{
+    "name": "form-builder",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "libs/form-builder/src",
+    "prefix": "lib",
+    "projectType": "library",
+    "tags": [
+        "type:util"
+    ],
+    "// targets": "to see all targets run: nx show project form-builder --web",
+    "targets": {}
+}
