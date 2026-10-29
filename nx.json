@@ -51,7 +51,7 @@
     "targetDefaults": {
         "@angular/build:application": {
             "cache": true,
-            "dependsOn": ["^build"],
+            "dependsOn": ["^build", "lint"],
             "inputs": ["production", "^production"]
         },
         "@angular/build:unit-test": {

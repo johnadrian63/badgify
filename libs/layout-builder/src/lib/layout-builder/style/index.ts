@@ -1,4 +1,5 @@
 export * from "./layout.builder.style";
+export * from "./layout.builder.section";
 export * from "./layout.builder.style.mapper";
 export * from "./layout.builder.style.abstract.component";
 export * from "./layout.builder.style.context.controller";

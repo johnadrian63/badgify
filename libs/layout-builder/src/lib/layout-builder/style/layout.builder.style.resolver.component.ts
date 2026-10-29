@@ -32,27 +32,29 @@ import { LayoutBuilderContextService } from "./layout.builder.style.context.serv
     ]
 })
 export class LayoutBuilderStyleResolverComponent {
-    public readonly data: InputSignal<Data | null> = input<Data | null>(null);
+    public readonly data: InputSignal<Data | null> = input.required<Data | null>();
 
     private readonly layoutStyleContextService: LayoutBuilderContextService = inject<LayoutBuilderContextService>(LayoutBuilderContextService);
     private readonly vcr: ViewContainerRef = inject<ViewContainerRef>(ViewContainerRef);
 
     constructor() {
         effect(() => {
-            this.initialize();
+            const data = this.data();
+
+            if (data) {
+                this.initialize(data);
+            }
         });
     }
 
-    private initialize(): void {
-        const data = this.data();
-        let layout = LayoutBuilderStyle.WITH_SIDEBAR;
+    private initialize(data: Data | null): void {
+        let layout = LayoutBuilderStyle.NO_LAYOUT;
 
         if (data && data["layout"]) {
             layout = data["layout"];
         }
 
         const component = layoutBuilderStyleMapper.get(layout);
-
         console.log(`using layout "${layout}"`);
 
         this.vcr.clear();

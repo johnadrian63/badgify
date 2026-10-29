@@ -5,7 +5,8 @@
     "prefix": "lib",
     "projectType": "library",
     "tags": [
-        "type:util"
+        "type:ui",
+        "scope:shared"
     ],
     "// targets": "to see all targets run: nx show project ui --web",
     "targets": {}

@@ -1,0 +1,13 @@
+{
+    "name": "ui-layout",
+    "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "libs/sandbox/ui-layout/src",
+    "prefix": "lib",
+    "projectType": "library",
+    "tags": [
+        "type:ui",
+        "scope:sandbox"
+    ],
+    "// targets": "to see all targets run: nx show project ui-layout --web",
+    "targets": {}
+}

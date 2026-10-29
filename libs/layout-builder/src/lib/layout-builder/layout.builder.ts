@@ -9,7 +9,7 @@ import { layoutStyleAdapterMapper, LayoutStyleVisitor } from "./style";
     template: "",
 })
 export abstract class LayoutBuilder implements OnInit {
-    public data: WritableSignal<Data | null> = signal<Data | null>(null);
+    public readonly data: WritableSignal<Data | null> = signal<Data | null>(null);
 
     private readonly document: Document = inject<Document>(DOCUMENT);
     private readonly renderer: Renderer2 = inject<Renderer2>(Renderer2);
@@ -35,7 +35,11 @@ export abstract class LayoutBuilder implements OnInit {
                 mergeMap((route) => route.data),
             )
             .subscribe((data: Data) => {
-                this.data.set(data);
+                const currentData = this.data();
+
+                if (data["layout"] && currentData?.["layout"] != data["layout"]) {
+                    this.data.set(data);
+                }
 
                 let layoutStyle = LayoutBuilderStyle.NO_LAYOUT;
 

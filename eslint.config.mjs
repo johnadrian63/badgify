@@ -21,15 +21,20 @@ export default [
                             onlyDependOnLibsWithTags: [
                                 "type:util",
                                 "type:feature",
+                                "type:ui",
                             ],
                         },
                         {
                             sourceTag: "type:util",
-                            onlyDependOnLibsWithTags: ["type:util"],
+                            onlyDependOnLibsWithTags: ["type:util", "type:ui"],
                         },
                         {
                             sourceTag: "type:feature",
                             onlyDependOnLibsWithTags: ["type:util"],
+                        },
+                        {
+                            sourceTag: "type:ui",
+                            onlyDependOnLibsWithTags: ["type:ui", "type:util"],
                         },
                         // main scope
                         {
@@ -49,6 +54,14 @@ export default [
                         },
                         // sandbox scope
                         {
+                            sourceTag: "scope:sandbox",
+                            onlyDependOnLibsWithTags: [
+                                "scope:sandbox",
+                                "scope:shared",
+                            ],
+                        },
+                        // shared scope
+                        {
                             sourceTag: "scope:shared",
                             onlyDependOnLibsWithTags: ["scope:shared"],
                         },
@@ -61,7 +74,7 @@ export default [
                 {
                     patterns: [
                         {
-                            group: ["@org/*/*"],
+                            group: ["@org/*/*/*"],
                             message:
                                 "Import from the library's public API instead of its internal files.",
                         },

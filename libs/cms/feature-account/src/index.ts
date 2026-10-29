@@ -1,1 +1,1 @@
-export * from "./lib/feature-account/feature-account";
+export * from "./lib";
