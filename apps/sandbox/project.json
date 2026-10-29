@@ -6,8 +6,7 @@
     "sourceRoot": "apps/sandbox/src",
     "tags": [
         "type:app",
-        "scope:main",
-        "scope:cms"
+        "scope:sandbox"
     ],
     "targets": {
         "build": {

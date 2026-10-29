@@ -11,7 +11,7 @@ import { LayoutBuilderStyleAdapterWithSidebar } from "./adapter/layout.builder.s
 import { LayoutBuilderStyleAdapterWithoutSidebar } from "./adapter/layout.builder.style.adapter.without.sidebar";
 import { LayoutBuilderStyleAdapterAbstract } from "./adapter/layout.builder.style.adapter.abstract";
 import {
-    LayoutBodyBackgroundMode,
+    LayoutBuilderBodyBackgroundMode,
     layoutBuilderBodyClassMapper
 } from "./layout.builder.body.class.mapper";
 
@@ -66,7 +66,7 @@ export class LayoutStyleVisitor implements ILayoutBuilderStyleVisitor {
         // do nothing
     }
 
-    private getBackgroundMode(backgroundMode: LayoutBodyBackgroundMode): string {
+    private getBackgroundMode(backgroundMode: LayoutBuilderBodyBackgroundMode): string {
         const layoutBodyClass = layoutBuilderBodyClassMapper.get(backgroundMode);
 
         return layoutBodyClass ?? "";

@@ -8,8 +8,8 @@ import {
 import { Data } from "@angular/router";
 import { ViewportService, MOBILE_VIEWPORT_TOKEN } from "@org/common";
 
-import { ILayoutBuilderStyleContextBuilderController } from "./layout.builder.style.context.controller";
 import { LayoutBuilderContextService } from "./layout.builder.style.context.service";
+import { ILayoutBuilderStyleContextBuilderController } from "./layout.builder.style.context.controller";
 
 @Component({
     template: ""
