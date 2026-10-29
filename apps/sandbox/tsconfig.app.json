@@ -18,13 +18,16 @@
     ],
     "references": [
         {
-            "path": "../../libs/layout-builder"
+            "path": "../../libs/sandbox/ui-layout"
+        },
+        {
+            "path": "../../libs/sandbox/feature-table-test"
         },
         {
             "path": "../../libs/sandbox/feature-form-test"
         },
         {
-            "path": "../../libs/sandbox/ui-layout"
+            "path": "../../libs/layout-builder"
         },
         {
             "path": "../../libs/common"
