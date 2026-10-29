@@ -31,6 +31,27 @@ export default [
                             sourceTag: "type:feature",
                             onlyDependOnLibsWithTags: ["type:util"],
                         },
+                        // main scope
+                        {
+                            sourceTag: "scope:main",
+                            onlyDependOnLibsWithTags: [
+                                "scope:main",
+                                "scope:shared",
+                            ],
+                        },
+                        // cms scope
+                        {
+                            sourceTag: "scope:cms",
+                            onlyDependOnLibsWithTags: [
+                                "scope:cms",
+                                "scope:shared",
+                            ],
+                        },
+                        // sandbox scope
+                        {
+                            sourceTag: "scope:shared",
+                            onlyDependOnLibsWithTags: ["scope:shared"],
+                        },
                     ],
                 },
             ],

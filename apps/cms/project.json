@@ -5,7 +5,8 @@
     "prefix": "app",
     "sourceRoot": "apps/cms/src",
     "tags": [
-        "type:app"
+        "type:app",
+        "scope:cms"
     ],
     "targets": {
         "build": {

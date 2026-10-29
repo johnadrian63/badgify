@@ -5,7 +5,8 @@
     "prefix": "app",
     "sourceRoot": "apps/main/src",
     "tags": [
-        "type:app"
+        "type:app",
+        "scope:main"
     ],
     "targets": {
         "build": {

@@ -5,7 +5,8 @@
     "prefix": "lib",
     "projectType": "library",
     "tags": [
-        "type:util"
+        "type:util",
+        "scope:shared"
     ],
     "// targets": "to see all targets run: nx show project form-builder --web",
     "targets": {}

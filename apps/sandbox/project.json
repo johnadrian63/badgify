@@ -5,7 +5,9 @@
     "prefix": "app",
     "sourceRoot": "apps/sandbox/src",
     "tags": [
-        "type:app"
+        "type:app",
+        "scope:main",
+        "scope:cms"
     ],
     "targets": {
         "build": {
