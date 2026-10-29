@@ -6,15 +6,15 @@ import {
     OnInit
 } from "@angular/core";
 import { Data } from "@angular/router";
-
-import { ILayoutStyleContextBuilderController } from "./layout.style.context.controller";
-import { LayoutContextService } from "./layout.style.context.service";
 import { ViewportService, MOBILE_VIEWPORT_TOKEN } from "@org/common";
+
+import { ILayoutBuilderStyleContextBuilderController } from "./layout.builder.style.context.controller";
+import { LayoutBuilderContextService } from "./layout.builder.style.context.service";
 
 @Component({
     template: ""
 })
-export abstract class LayoutStyleAbstractComponent implements OnInit, OnDestroy, ILayoutStyleContextBuilderController {
+export abstract class LayoutBuilderStyleAbstractComponent implements OnInit, OnDestroy, ILayoutBuilderStyleContextBuilderController {
     @Input() public data!: Data;
 
     public get sidebarExpanded(): boolean {
@@ -28,11 +28,13 @@ export abstract class LayoutStyleAbstractComponent implements OnInit, OnDestroy,
     private baseControllerId!: number;
 
     protected readonly mobileViewportValue: string = inject<string>(MOBILE_VIEWPORT_TOKEN);
-    protected readonly layoutStyleContextService: LayoutContextService = inject<LayoutContextService>(LayoutContextService);
+    protected readonly layoutStyleContextService: LayoutBuilderContextService = inject<LayoutBuilderContextService>(LayoutBuilderContextService);
     protected readonly viewportService: ViewportService = inject<ViewportService>(ViewportService);
 
     public ngOnInit(): void {
         this.baseControllerId = this.layoutStyleContextService.registerController(this);
+
+        console.log("layout initialized.");
     }
 
     public ngOnDestroy(): void {

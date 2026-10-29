@@ -1,13 +1,13 @@
 import { Injectable } from "@angular/core";
 import { ContextBuilderService } from "@org/context-builder";
 
-import { LayoutContextController } from "./layout.style.context.controller";
-import { LayoutStyleContextDataLoader } from "./layout.style.context.data.loader";
+import { LayoutBuilderContextController } from "./layout.builder.style.context.controller";
+import { LayoutBuilderStyleContextDataLoader } from "./layout.builder.style.context.data.loader";
 
 @Injectable({
     providedIn: "root"
 })
-export class LayoutContextService extends ContextBuilderService<void> {
+export class LayoutBuilderContextService extends ContextBuilderService<void> {
 
     public get sidebarExpanded(): boolean {
         return this._sidebarExpanded;
@@ -15,8 +15,8 @@ export class LayoutContextService extends ContextBuilderService<void> {
 
     private _sidebarExpanded: boolean = true;
 
-    protected override context: LayoutContextController = new LayoutContextController();
-    protected override loader: LayoutStyleContextDataLoader = new LayoutStyleContextDataLoader();
+    protected override context: LayoutBuilderContextController = new LayoutBuilderContextController();
+    protected override loader: LayoutBuilderStyleContextDataLoader = new LayoutBuilderStyleContextDataLoader();
 
     public async initialize(): Promise<void> {
         await this.load();

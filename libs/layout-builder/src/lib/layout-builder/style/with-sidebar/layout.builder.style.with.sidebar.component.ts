@@ -7,12 +7,12 @@ import { CommonModule } from "@angular/common";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { UiBackdropComponent } from "@org/ui";
 
-import { LayoutStyleAbstractComponent } from "../layout.style.abstract.component";
+import { LayoutBuilderStyleAbstractComponent } from "../layout.builder.style.abstract.component";
 
 @Component({
-    selector: "lib-layout-style-with-sidebar-component",
-    templateUrl: "./layout.style.with.sidebar.component.html",
-    styleUrl: "./layout.style.with.sidebar.component.scss",
+    selector: "lib-layout-builder-style-with-sidebar-component",
+    templateUrl: "./layout.builder.style.with.sidebar.component.html",
+    styleUrl: "./layout.builder.style.with.sidebar.component.scss",
     imports: [
         CommonModule,
         RouterModule,
@@ -20,7 +20,7 @@ import { LayoutStyleAbstractComponent } from "../layout.style.abstract.component
         UiBackdropComponent
     ]
 })
-export class LayoutStyleWithSidebarComponent extends LayoutStyleAbstractComponent implements OnInit {
+export class LayoutBuilderStyleWithSidebarComponent extends LayoutBuilderStyleAbstractComponent implements OnInit {
 
     public override ngOnInit(): void {
         super.ngOnInit();

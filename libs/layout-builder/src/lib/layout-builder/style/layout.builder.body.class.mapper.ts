@@ -3,7 +3,7 @@ export enum LayoutBodyBackgroundMode {
     LIGHT = "LIGHT"
 }
 
-export const layoutBodyClassMapper: Map<LayoutBodyBackgroundMode, string> = new Map<LayoutBodyBackgroundMode, string>([
+export const layoutBuilderBodyClassMapper: Map<LayoutBodyBackgroundMode, string> = new Map<LayoutBodyBackgroundMode, string>([
     [LayoutBodyBackgroundMode.WHITE, "body-white"],
     [LayoutBodyBackgroundMode.LIGHT, "bg-gray-200"]
 ]);

@@ -1,10 +1,10 @@
 import { ContextBuilder, IContextBuilderBaseController } from "@org/context-builder";
 
-export interface ILayoutStyleContextBuilderController extends IContextBuilderBaseController {
+export interface ILayoutBuilderStyleContextBuilderController extends IContextBuilderBaseController {
     onSidebarExpand(expand: boolean): void;
 }
 
-export class LayoutContextController extends ContextBuilder<ILayoutStyleContextBuilderController> implements ILayoutStyleContextBuilderController {
+export class LayoutBuilderContextController extends ContextBuilder<ILayoutBuilderStyleContextBuilderController> implements ILayoutBuilderStyleContextBuilderController {
     public onSidebarExpand(expand: boolean): void {
         for (const controller of this.controllers) {
             controller.onSidebarExpand(expand);

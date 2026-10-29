@@ -12,11 +12,12 @@ import {
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 import { ViewportService, MOBILE_VIEWPORT_TOKEN } from "@org/common";
 
-import { LayoutContextService } from "../layout.style.context.service";
+import { LayoutBuilderContextService } from "../layout.builder.style.context.service";
+
 @Component({
     template: ""
 })
-export abstract class LayoutStyleWithSidebarControlAbstractComponent implements OnInit {
+export abstract class LayoutBuilderStyleWithSidebarControlAbstractComponent implements OnInit {
 
     public get isMobileViewport(): boolean {
         return this._viewportService.isMobileViewport(this._mobileViewportValue);
@@ -28,7 +29,7 @@ export abstract class LayoutStyleWithSidebarControlAbstractComponent implements 
 
     private readonly _mobileViewportValue: string = inject<string>(MOBILE_VIEWPORT_TOKEN);
     private readonly _viewportService: ViewportService = inject<ViewportService>(ViewportService);
-    private readonly _layoutStyleContextService: LayoutContextService = inject<LayoutContextService>(LayoutContextService);
+    private readonly _layoutStyleContextService: LayoutBuilderContextService = inject<LayoutBuilderContextService>(LayoutBuilderContextService);
     private readonly _router: Router = inject<Router>(Router);
     private readonly _cdr: ChangeDetectorRef = inject<ChangeDetectorRef>(ChangeDetectorRef);
 

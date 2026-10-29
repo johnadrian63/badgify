@@ -1,4 +1,4 @@
-export enum LayoutStyle {
+export enum LayoutBuilderStyle {
     NO_LAYOUT = "NO_LAYOUT",
     RESPONSIVE = "RESPONSIVE",
     WITH_SIDEBAR = "WITH_SIDEBAR",
