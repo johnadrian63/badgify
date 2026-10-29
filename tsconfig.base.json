@@ -27,7 +27,11 @@
             "@org/layout-builder": ["./libs/layout-builder/src/index.ts"],
             "@org/common": ["./libs/common/src/index.ts"],
             "@org/ui": ["./libs/ui/src/index.ts"],
-            "@org/loader": ["./libs/loader/src/index.ts"]
+            "@org/loader": ["./libs/loader/src/index.ts"],
+            "@org/feature-dashboard": [
+                "./libs/cms/feature-dashboard/src/index.ts"
+            ],
+            "@org/feature-account": ["./libs/cms/feature-account/src/index.ts"]
         }
     }
 }
