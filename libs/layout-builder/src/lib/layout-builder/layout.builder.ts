@@ -1,6 +1,6 @@
 import { Component, DOCUMENT, inject, OnInit, Renderer2, signal, WritableSignal } from "@angular/core";
 import { ActivatedRoute, Data, NavigationEnd, Router } from "@angular/router";
-import { filter, map, mergeMap } from "rxjs";
+import { filter, map, switchMap } from "rxjs";
 
 import { LayoutBuilderStyle } from "./style/layout.builder.style";
 import { layoutStyleAdapterMapper, LayoutStyleVisitor } from "./style";
@@ -32,7 +32,7 @@ export abstract class LayoutBuilder implements OnInit {
                 filter((route: ActivatedRoute) => {
                     return ["primary"].includes(route.outlet);
                 }),
-                mergeMap((route) => route.data),
+                switchMap((route) => route.data)
             )
             .subscribe((data: Data) => {
                 const currentData = this.data();

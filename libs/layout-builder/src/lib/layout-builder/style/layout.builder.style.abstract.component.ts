@@ -43,6 +43,8 @@ export abstract class LayoutBuilderStyleAbstractComponent implements OnInit, OnD
 
     public destroy(): void {
         this.layoutStyleContextService.unregisterController(this.baseControllerId);
+
+        console.log("layout destroyed.");
     }
 
     public onSidebarExpand(expand: boolean): void {
