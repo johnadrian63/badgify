@@ -55,6 +55,7 @@ export class LayoutBuilderStyleResolverComponent {
         }
 
         const component = layoutBuilderStyleMapper.get(layout);
+
         console.log(`using layout "${layout}"`);
 
         this.vcr.clear();
