@@ -1,13 +1,10 @@
 import { Component } from "@angular/core";
-import { RouterModule } from "@angular/router";
-import { NxWelcome } from "./nx-welcome";
+import { LayoutBuilder, LayoutBuilderStyleResolverComponent } from "@org/layout-builder";
 
 @Component({
-    imports: [NxWelcome, RouterModule],
+    imports: [LayoutBuilderStyleResolverComponent],
     selector: "app-root",
     templateUrl: "./app.html",
     styleUrl: "./app.scss",
 })
-export class App {
-    protected title = "cms";
-}
+export class App extends LayoutBuilder { }

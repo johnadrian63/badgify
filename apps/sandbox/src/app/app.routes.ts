@@ -17,9 +17,6 @@ export const appRoutes: Route[] = [
             {
                 path: "table-test",
                 loadComponent: () => import("@org/sandbox/feature-table-test").then((c) => c.FeatureTableTest),
-                data: {
-                    layout: LayoutBuilderStyle.TWO_COLUMNS
-                }
             },
             {
                 path: "",

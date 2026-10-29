@@ -37,14 +37,21 @@ export abstract class LayoutBuilder implements OnInit {
             .subscribe((data: Data) => {
                 const currentData = this.data();
 
-                if (data["layout"] && currentData?.["layout"] != data["layout"]) {
-                    this.data.set(data);
-                }
-
                 let layoutStyle = LayoutBuilderStyle.NO_LAYOUT;
 
-                if (layoutStyleAdapterMapper.has(data["layout"])) {
-                    layoutStyle = data["layout"];
+                const currentLayout = data["layout"];
+
+                if (currentLayout && currentData && currentData["layout"] != currentLayout) {
+                    this.data.set(data);
+
+                    if (layoutStyleAdapterMapper.has(currentLayout)) {
+                        layoutStyle = currentLayout;
+                    }
+                } else {
+                    this.data.set({
+                        layout: LayoutBuilderStyle.NO_LAYOUT,
+                        ...data
+                    });
                 }
 
                 const layoutAdapterModel = layoutStyleAdapterMapper.get(layoutStyle);

@@ -47,12 +47,10 @@ export class LayoutBuilderStyleResolverComponent {
         });
     }
 
-    private initialize(data: Data | null): void {
+    private initialize(data: Data): void {
         let layout = LayoutBuilderStyle.NO_LAYOUT;
 
-        if (data && data["layout"]) {
-            layout = data["layout"];
-        }
+        layout = data?.["layout"];
 
         const component = layoutBuilderStyleMapper.get(layout);
 
@@ -64,7 +62,7 @@ export class LayoutBuilderStyleResolverComponent {
             const componentRef = this.vcr.createComponent(component);
             const componentInstance = componentRef.instance;
 
-            componentInstance.data = this.data;
+            componentInstance.data = data;
 
             componentRef.changeDetectorRef.detectChanges();
         }

@@ -10,6 +10,9 @@
     "exclude": ["src/**/*.spec.ts", "src/**/*.test.ts"],
     "references": [
         {
+            "path": "../../libs/layout-builder"
+        },
+        {
             "path": "../../libs/cms/feature-account"
         }
     ]

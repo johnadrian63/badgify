@@ -25,15 +25,18 @@ export class LayoutBuilderStyleWithSidebarComponent extends LayoutBuilderStyleAb
     public override ngOnInit(): void {
         super.ngOnInit();
 
+        const dataSidebarExpanded = this.data?.["sidebarExpanded"];
+
         if (this.isMobileViewport) {
-            const sidebarExpanded = this.data["sidebarExpanded"] !== undefined ? this.data["sidebarExpanded"] : false;
+            const sidebarExpanded =
+                dataSidebarExpanded !== undefined ? dataSidebarExpanded : false;
 
             this.layoutStyleContextService.sidebarExpand(sidebarExpanded);
 
             return;
         }
 
-        const sidebarExpanded = this.data["sidebarExpanded"] !== undefined ? this.data["sidebarExpanded"] : true;
+        const sidebarExpanded = dataSidebarExpanded !== undefined ? dataSidebarExpanded : true;
 
         this.layoutStyleContextService.sidebarExpand(sidebarExpanded);
     }
