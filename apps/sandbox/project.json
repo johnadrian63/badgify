@@ -27,6 +27,7 @@
                     }
                 ],
                 "styles": [
+                    "apps/sandbox/src/tailwind.css",
                     "apps/sandbox/src/styles.scss"
                 ]
             },
