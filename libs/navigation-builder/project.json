@@ -1,0 +1,13 @@
+{
+    "name": "navigation-builder",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "libs/navigation-builder/src",
+    "prefix": "lib",
+    "projectType": "library",
+    "tags": [
+        "type:ui",
+        "scope:shared"
+    ],
+    "// targets": "to see all targets run: nx show project navigation-builder --web",
+    "targets": {}
+}

@@ -1,0 +1,7 @@
+<div [ngClass]="classes()" class="flex items-center w-full gap-x-1">
+    @for (menu of menus; track menu.label) {
+    <lib-navigation-builder-horizontal-resolver
+        [menu]="menu"
+    ></lib-navigation-builder-horizontal-resolver>
+    }
+</div>

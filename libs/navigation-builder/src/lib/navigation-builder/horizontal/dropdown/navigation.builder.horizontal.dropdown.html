@@ -1,0 +1,14 @@
+<lib-navigation-builder-horizontal-dropdown-item
+    #dropdown
+    [menu]="menu()"
+    [menuClass]="menuClass"
+>
+    <span
+        [ngClass]="classes"
+        class="cursor-pointer flex items-center"
+        [cdkMenuTriggerFor]="dropdown.menuItem()!"
+    >
+        <span>{{ menu().text }}</span
+        ><fa-icon class="text-xs ml-1" [icon]="expandIcon"></fa-icon>
+    </span>
+</lib-navigation-builder-horizontal-dropdown-item>

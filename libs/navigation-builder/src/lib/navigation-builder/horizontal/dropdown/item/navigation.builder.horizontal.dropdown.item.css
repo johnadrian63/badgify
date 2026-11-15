@@ -1,0 +1,9 @@
+@reference "tailwindcss";
+
+.dropdown-menu {
+    @apply inline-flex flex-col min-w-44 max-w-2xs shadow-lg border border-gray-100;
+}
+
+.dropdown-menu-item {
+    @apply flex items-center flex-1 flex-row cursor-pointer border-none outline-none select-none min-w-16 leading-9 bg-neutral-50 hover:bg-gray-200 dark:hover:text-black;
+}

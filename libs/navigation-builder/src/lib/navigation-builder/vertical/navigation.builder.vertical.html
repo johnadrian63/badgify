@@ -1,0 +1,25 @@
+@if (selectedMenus.length > 1) {
+<div
+    role="button"
+    tabindex="0"
+    class="p-2 bg-gray-100 flex items-center cursor-pointer font-bold"
+    (click)="back()"
+>
+    <fa-icon [icon]="faAngleLeftIcon"></fa-icon>
+    <span>{{ currentMenu.parent?.text }}</span>
+</div>
+}
+
+<ul
+    class="vertical-menu transition-opacity duration-100 ease-in-out"
+    [class.opacity-0]="!isVisible()"
+    [class.opacity-100]="isVisible()"
+>
+    @for (menu of currentMenu.children; track menu.label) {
+    <li class="vertical-menu-item">
+        <lib-navigation-builder-vertical-menu-resolver
+            [menu]="menu"
+        ></lib-navigation-builder-vertical-menu-resolver>
+    </li>
+    }
+</ul>

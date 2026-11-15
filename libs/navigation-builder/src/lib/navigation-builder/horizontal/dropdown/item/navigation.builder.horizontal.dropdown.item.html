@@ -1,0 +1,29 @@
+<ng-content />
+
+<ng-template #menuItem>
+    <div class="dropdown-menu" [ngClass]="menuClass" cdkMenu>
+        @for (item of menu().children; track item.label) { @if
+        (item.children?.length) {
+        <div
+            class="dropdown-menu-item"
+            [cdkMenuTriggerFor]="dropdown.menuItem()!"
+            cdkMenuItem
+        >
+            <lib-navigation-builder-horizontal-resolver
+                [menu]="item"
+            ></lib-navigation-builder-horizontal-resolver>
+        </div>
+        <lib-navigation-builder-horizontal-dropdown-item
+            #dropdown
+            [menu]="item"
+            [classes]="classes"
+        ></lib-navigation-builder-horizontal-dropdown-item>
+        } @else {
+        <div class="dropdown-menu-item" cdkMenuItem>
+            <lib-navigation-builder-horizontal-resolver
+                [menu]="item"
+            ></lib-navigation-builder-horizontal-resolver>
+        </div>
+        } }
+    </div>
+</ng-template>

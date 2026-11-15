@@ -1,0 +1,12 @@
+<span
+    [ngClass]="classes"
+    class="cursor-pointer"
+    [matMenuTriggerFor]="dropdown.menuItem()!"
+>
+    {{ menu().text }}<fa-icon class="text-xs" [icon]="expandIcon"></fa-icon>
+</span>
+
+<lib-navigation-builder-display-menu-dropdown-item
+    #dropdown
+    [menu]="menu()"
+></lib-navigation-builder-display-menu-dropdown-item>
