@@ -18,19 +18,9 @@
 
 <div class="grid h-screen grid-rows-[auto_minmax(0,1fr)]">
     <header
-        class="flex items-center p-2 fixed bottom-0 w-full border-neutral-200 shadow-lg"
+        class="flex items-center fixed bottom-0 w-full border-neutral-200 shadow-lg"
     >
-        <div class="mr-2">
-            <a routerLink="responsive" class="mr-2">Logo</a>
-            <!--Logo here-->
-        </div>
-        <nav>
-            <!-- main navigation here like profile -->
-        </nav>
-
-        <div class="ml-auto flex relative z-40">
-            <!-- right navigation here like profile -->
-        </div>
+        <router-outlet name="header"></router-outlet>
     </header>
     <div
         [class.md:grid-cols-[0_minmax(0,1fr)_auto]]="false"
@@ -42,6 +32,7 @@
             [class.translate-x-0]="true"
             class="sidebar"
         >
+            <router-outlet name="sidebar"></router-outlet>
             <ul class="flex flex-col">
                 <li>
                     <a class="py-1 px-2 block">Link </a>
@@ -52,6 +43,7 @@
         </aside>
         <main class="flex flex-col min-w-0 min-h-0 overflow-y-auto px-3">
             <div class="mb-2">
+                <router-outlet></router-outlet>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
                 id erat turpis. Quisque vitae mattis eros. Curabitur at est
                 magna. Nulla sed mollis lacus. Donec dictum luctus maximus. Nunc
