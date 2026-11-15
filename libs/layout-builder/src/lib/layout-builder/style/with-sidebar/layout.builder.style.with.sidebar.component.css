@@ -1,0 +1,45 @@
+@reference "tailwindcss";
+
+header {
+    @apply bg-neutral-100;
+
+    @media (width >=theme(--breakpoint-md)) {
+        & {
+            @apply sticky top-0 z-10;
+        }
+    }
+
+    nav {
+        @apply hidden;
+
+        @media (width >=theme(--breakpoint-md)) {
+            @apply block;
+        }
+    }
+
+    .menu-toggle {
+        @media (width >=theme(--breakpoint-md)) {
+            @apply hidden;
+        }
+    }
+
+    .profile-icon {
+        @apply hidden;
+
+        &.mobile {
+            @apply block;
+        }
+
+        @media (width >=theme(--breakpoint-md)) {
+            @apply block;
+
+            &.mobile {
+                @apply hidden;
+            }
+        }
+    }
+}
+
+.sidebar {
+    @apply bottom-10 fixed md:static z-10 inset-y-0 left-0 min-h-0 overflow-y-auto w-62.5 transition-transform bg-neutral-50 border border-neutral-200 shadow-lg;
+}

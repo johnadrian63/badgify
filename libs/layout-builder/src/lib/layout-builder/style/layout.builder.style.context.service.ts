@@ -1,12 +1,10 @@
-import { Injectable } from "@angular/core";
+import { Service } from "@angular/core";
 import { ContextBuilderService } from "@org/context-builder";
 
 import { LayoutBuilderContextController } from "./layout.builder.style.context.controller";
 import { LayoutBuilderStyleContextDataLoader } from "./layout.builder.style.context.data.loader";
 
-@Injectable({
-    providedIn: "root"
-})
+@Service()
 export class LayoutBuilderContextService extends ContextBuilderService<void> {
 
     public get sidebarExpanded(): boolean {

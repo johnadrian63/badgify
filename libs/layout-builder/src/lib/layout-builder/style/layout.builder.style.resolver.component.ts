@@ -50,7 +50,7 @@ export class LayoutBuilderStyleResolverComponent {
     private initialize(data: Data): void {
         let layout = LayoutBuilderStyle.NO_LAYOUT;
 
-        layout = data?.["layout"];
+        layout = data["layout"];
 
         const component = layoutBuilderStyleMapper.get(layout);
 

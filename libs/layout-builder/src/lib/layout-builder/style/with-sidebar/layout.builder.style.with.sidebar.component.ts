@@ -12,7 +12,7 @@ import { LayoutBuilderStyleAbstractComponent } from "../layout.builder.style.abs
 @Component({
     selector: "lib-layout-builder-style-with-sidebar-component",
     templateUrl: "./layout.builder.style.with.sidebar.component.html",
-    styleUrl: "./layout.builder.style.with.sidebar.component.scss",
+    styleUrl: "./layout.builder.style.with.sidebar.component.css",
     imports: [
         CommonModule,
         RouterModule,

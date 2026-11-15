@@ -1,5 +1,5 @@
 import { Component, DOCUMENT, inject, OnInit, Renderer2, signal, WritableSignal } from "@angular/core";
-import { ActivatedRoute, Data, NavigationEnd, Router } from "@angular/router";
+import { ActivatedRoute, Data, NavigationEnd, Event, Router } from "@angular/router";
 import { filter, map, switchMap } from "rxjs";
 
 import { LayoutBuilderStyle } from "./style/layout.builder.style";
@@ -13,14 +13,14 @@ export abstract class LayoutBuilder implements OnInit {
 
     private readonly document: Document = inject<Document>(DOCUMENT);
     private readonly renderer: Renderer2 = inject<Renderer2>(Renderer2);
-    private readonly activatedRoute: ActivatedRoute = inject(ActivatedRoute);
-    private readonly router: Router = inject(Router);
+    private readonly activatedRoute: ActivatedRoute = inject<ActivatedRoute>(ActivatedRoute);
+    private readonly router: Router = inject<Router>(Router);
 
     public ngOnInit(): void {
         this.router
             .events
             .pipe(
-                filter((event) => event instanceof NavigationEnd),
+                filter((event: Event) => event instanceof NavigationEnd),
                 map(() => this.activatedRoute),
                 map((route: ActivatedRoute) => {
                     while (route.firstChild) {
@@ -32,7 +32,7 @@ export abstract class LayoutBuilder implements OnInit {
                 filter((route: ActivatedRoute) => {
                     return ["primary"].includes(route.outlet);
                 }),
-                switchMap((route) => route.data)
+                switchMap((route: ActivatedRoute) => route.data)
             )
             .subscribe((data: Data) => {
                 const currentData = this.data();
