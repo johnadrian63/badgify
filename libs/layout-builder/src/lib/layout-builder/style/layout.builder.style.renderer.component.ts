@@ -17,7 +17,7 @@ import { layoutBuilderStyleMapper } from "./layout.builder.style.mapper";
 import { LayoutBuilderContextService } from "./layout.builder.style.context.service";
 
 @Component({
-    selector: "lib-layout-builder-style-resolver-component",
+    selector: "lib-layout-builder-style-renderer-component",
     template: "",
     styles: [
         `
@@ -31,7 +31,7 @@ import { LayoutBuilderContextService } from "./layout.builder.style.context.serv
         RouterModule
     ]
 })
-export class LayoutBuilderStyleResolverComponent {
+export class LayoutBuilderStyleRendererComponent {
     public readonly data: InputSignal<Data | null> = input.required<Data | null>();
 
     private readonly layoutStyleContextService: LayoutBuilderContextService = inject<LayoutBuilderContextService>(LayoutBuilderContextService);

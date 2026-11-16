@@ -5,6 +5,6 @@ export * from "./layout.builder.style.abstract.component";
 export * from "./layout.builder.style.context.controller";
 export * from "./layout.builder.style.context.data.loader";
 export * from "./layout.builder.style.context.service";
-export * from "./layout.builder.style.resolver.component";
+export * from "./layout.builder.style.renderer.component";
 export * from "./layout.builder.style.visitor";
 export * from "./layout.builder.body.class.mapper";
