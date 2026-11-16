@@ -70,6 +70,9 @@
             ],
             "@org/sandbox/feature-error-page": [
                 "./libs/sandbox/feature-error-page/src/index.ts"
+            ],
+            "@org/cms/cms-ui-layout": [
+                "./libs/cms/cms-ui-layout/src/index.ts"
             ]
         }
     }

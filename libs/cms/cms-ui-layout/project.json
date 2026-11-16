@@ -1,0 +1,13 @@
+{
+    "name": "cms-ui-layout",
+    "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "libs/cms/cms-ui-layout/src",
+    "prefix": "lib",
+    "projectType": "library",
+    "tags": [
+        "type:ui",
+        "scope:cms"
+    ],
+    "// targets": "to see all targets run: nx show project cms-ui-layout --web",
+    "targets": {}
+}

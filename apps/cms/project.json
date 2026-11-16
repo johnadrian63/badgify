@@ -27,6 +27,7 @@
                     }
                 ],
                 "styles": [
+                    "apps/cms/src/tailwind.css",
                     "apps/cms/src/styles.scss"
                 ]
             },
