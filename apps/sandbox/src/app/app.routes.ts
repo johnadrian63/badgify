@@ -21,7 +21,7 @@ export const appRoutes: Route[] = [
             {
                 path: "",
                 outlet: LayoutBuilderSection.HEADER,
-                loadComponent: () => import("@org/sandbox/ui-layout").then((c) => c.Header),
+                loadComponent: () => import("@org/sandbox/ui-layout").then((c) => c.UiLayoutHeader),
             }
         ],
         data: {

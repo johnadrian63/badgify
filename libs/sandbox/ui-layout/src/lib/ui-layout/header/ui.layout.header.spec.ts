@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { Header } from "./header";
+import { UiLayoutHeader } from "./ui.layout.header";
 
 describe("Header", () => {
-    let component: Header;
-    let fixture: ComponentFixture<Header>;
+    let component: UiLayoutHeader;
+    let fixture: ComponentFixture<UiLayoutHeader>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [Header],
+            imports: [UiLayoutHeader],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(Header);
+        fixture = TestBed.createComponent(UiLayoutHeader);
         component = fixture.componentInstance;
         await fixture.whenStable();
     });

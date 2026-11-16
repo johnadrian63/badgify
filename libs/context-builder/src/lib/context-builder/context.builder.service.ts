@@ -1,8 +1,8 @@
 import { Injectable } from "@angular/core";
 
-import { ContextBuilder } from "./context-builder";
+import { ContextBuilder } from "./context.builder";
 import { IContextBuilderController } from "./model/interface";
-import { ContextBuilderDataLoader } from "./model/context-builder.data-loader";
+import { ContextBuilderDataLoader } from "./model/context.builder.data-loader";
 
 interface IContextBuilderService {
     registerController(controller: IContextBuilderController): number;

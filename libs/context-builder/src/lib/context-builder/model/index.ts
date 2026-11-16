@@ -1,2 +1,2 @@
 export * from "./interface";
-export * from "./context-builder.data-loader";
+export * from "./context.builder.data-loader";

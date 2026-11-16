@@ -1,4 +1,9 @@
-<span [ngClass]="classes" (click)="onExpand.emit(menu())">
+<span
+    role="button"
+    tabindex="0"
+    [ngClass]="classes"
+    (click)="expanded.emit(menu())"
+>
     {{ menu().text }}
     <fa-icon class="ml-auto" [icon]="expandIcon"></fa-icon>
 </span>
