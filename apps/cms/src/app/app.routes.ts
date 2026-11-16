@@ -27,12 +27,12 @@ export const appRoutes: Route[] = [
             {
                 path: "",
                 outlet: LayoutBuilderSection.HEADER,
-                loadComponent: () => import("@org/cms/cms-ui-layout").then((c) => c.UiLayoutHeader),
+                loadComponent: () => import("@org/cms/ui-layout").then((c) => c.UiLayoutHeader),
             },
             {
                 path: "",
                 outlet: LayoutBuilderSection.FOOTER,
-                loadComponent: () => import("@org/cms/cms-ui-layout").then((c) => c.UiLayoutFooter),
+                loadComponent: () => import("@org/cms/ui-layout").then((c) => c.UiLayoutFooter),
             },
             // {
             //     path: "**",

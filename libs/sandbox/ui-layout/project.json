@@ -1,5 +1,5 @@
 {
-    "name": "ui-layout",
+    "name": "sandbox-ui-layout",
     "$schema": "../../../node_modules/nx/schemas/project-schema.json",
     "sourceRoot": "libs/sandbox/ui-layout/src",
     "prefix": "lib",

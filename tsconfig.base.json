@@ -71,7 +71,7 @@
             "@org/sandbox/feature-error-page": [
                 "./libs/sandbox/feature-error-page/src/index.ts"
             ],
-            "@org/cms/cms-ui-layout": [
+            "@org/cms/ui-layout": [
                 "./libs/cms/ui-layout/src/index.ts"
             ]
         }

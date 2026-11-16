@@ -14,7 +14,7 @@ export default defineConfig(() => ({
     //  plugins: [],
     // },
     test: {
-        name: "ui-layout",
+        name: "sandbox-ui-layout",
         watch: false,
         globals: true,
         environment: "jsdom",
