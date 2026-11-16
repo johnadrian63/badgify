@@ -73,6 +73,9 @@
             ],
             "@org/cms/feature-authentication": [
                 "./libs/cms/feature-authentication/src/index.ts"
+            ],
+            "@org/sandbox/feature-form-test": [
+                "./libs/sandbox/feature-form-test/src/index.ts"
             ]
         }
     }
