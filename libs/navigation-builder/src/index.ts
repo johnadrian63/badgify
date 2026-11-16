@@ -1,1 +1,1 @@
-export * from "./lib/navigation-builder/navigation-builder";
+export * from "./lib";
