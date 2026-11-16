@@ -1,5 +1,5 @@
 {
-    "name": "feature-table-test",
+    "name": "sandbox-feature-table-test",
     "$schema": "../../../node_modules/nx/schemas/project-schema.json",
     "sourceRoot": "libs/sandbox/feature-table-test/src",
     "prefix": "lib",

@@ -14,7 +14,7 @@ export default defineConfig(() => ({
     //  plugins: [],
     // },
     test: {
-        name: "feature-error-page",
+        name: "sandbox-feature-error-page",
         watch: false,
         globals: true,
         environment: "jsdom",

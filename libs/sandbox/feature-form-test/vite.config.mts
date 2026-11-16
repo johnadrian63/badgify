@@ -14,7 +14,7 @@ export default defineConfig(() => ({
     //  plugins: [],
     // },
     test: {
-        name: "feature-form-test",
+        name: "sandbox-feature-form-test",
         watch: false,
         globals: true,
         environment: "jsdom",

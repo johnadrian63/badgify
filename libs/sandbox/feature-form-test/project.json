@@ -1,5 +1,5 @@
 {
-    "name": "feature-form-test",
+    "name": "sandbox-feature-form-test",
     "$schema": "../../../node_modules/nx/schemas/project-schema.json",
     "sourceRoot": "libs/sandbox/feature-form-test/src",
     "prefix": "lib",

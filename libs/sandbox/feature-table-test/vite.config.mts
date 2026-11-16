@@ -14,7 +14,7 @@ export default defineConfig(() => ({
     //  plugins: [],
     // },
     test: {
-        name: "feature-table-test",
+        name: "sandbox-feature-table-test",
         watch: false,
         globals: true,
         environment: "jsdom",

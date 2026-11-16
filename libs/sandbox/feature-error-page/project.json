@@ -1,5 +1,5 @@
 {
-    "name": "feature-error-page",
+    "name": "sandbox-feature-error-page",
     "$schema": "../../../node_modules/nx/schemas/project-schema.json",
     "sourceRoot": "libs/sandbox/feature-error-page/src",
     "prefix": "lib",
