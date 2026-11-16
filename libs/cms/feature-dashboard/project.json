@@ -1,5 +1,5 @@
 {
-    "name": "feature-dashboard",
+    "name": "cms-feature-dashboard",
     "$schema": "../../../node_modules/nx/schemas/project-schema.json",
     "sourceRoot": "libs/cms/feature-dashboard/src",
     "prefix": "lib",

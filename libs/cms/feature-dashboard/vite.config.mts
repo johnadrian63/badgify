@@ -14,7 +14,7 @@ export default defineConfig(() => ({
     //  plugins: [],
     // },
     test: {
-        name: "feature-dashboard",
+        name: "cms-feature-dashboard",
         watch: false,
         globals: true,
         environment: "jsdom",

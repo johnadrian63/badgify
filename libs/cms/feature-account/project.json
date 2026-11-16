@@ -1,5 +1,5 @@
 {
-    "name": "feature-account",
+    "name": "cms-feature-account",
     "$schema": "../../../node_modules/nx/schemas/project-schema.json",
     "sourceRoot": "libs/cms/feature-account/src",
     "prefix": "lib",

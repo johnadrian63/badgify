@@ -14,7 +14,7 @@ export default defineConfig(() => ({
     //  plugins: [],
     // },
     test: {
-        name: "feature-account",
+        name: "cms-feature-account",
         watch: false,
         globals: true,
         environment: "jsdom",

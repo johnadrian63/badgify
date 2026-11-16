@@ -73,6 +73,9 @@
             ],
             "@org/cms/ui-layout": [
                 "./libs/cms/ui-layout/src/index.ts"
+            ],
+            "@org/cms/feature-authentication": [
+                "./libs/cms/feature-authentication/src/index.ts"
             ]
         }
     }

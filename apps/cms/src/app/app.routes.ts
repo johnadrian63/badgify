@@ -11,6 +11,13 @@ export const appRoutes: Route[] = [
                 pathMatch: "full"
             },
             {
+                path: "login",
+                loadComponent: () => import("@org/cms/feature-authentication").then((c) => c.FeatureAuthentication),
+                data: {
+                    layout: LayoutBuilderStyle.NO_LAYOUT
+                }
+            },
+            {
                 path: "dashboard",
                 loadComponent: () => import("@org/cms/feature-dashboard").then((c) => c.FeatureDashboard),
                 data: {
