@@ -8,6 +8,7 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { UiBackdropComponent } from "@org/ui";
 
 import { LayoutBuilderStyleAbstractComponent } from "../layout.builder.style.abstract.component";
+import { LayoutBuilderSection } from "../layout.builder.section";
 
 @Component({
     selector: "lib-layout-builder-style-with-sidebar-component",
@@ -21,6 +22,7 @@ import { LayoutBuilderStyleAbstractComponent } from "../layout.builder.style.abs
     ]
 })
 export class LayoutBuilderStyleWithSidebarComponent extends LayoutBuilderStyleAbstractComponent implements OnInit {
+    public readonly layoutBuilderSection = LayoutBuilderSection;
 
     public override ngOnInit(): void {
         super.ngOnInit();

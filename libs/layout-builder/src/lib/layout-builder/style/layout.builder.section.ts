@@ -1,4 +1,5 @@
 export enum LayoutBuilderSection {
     HEADER = "header",
-    SIDEBAR = "sidebar"
+    SIDEBAR = "sidebar",
+    FOOTER = "footer",
 }

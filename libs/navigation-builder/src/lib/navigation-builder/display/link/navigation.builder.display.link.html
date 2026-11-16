@@ -1,9 +1,14 @@
-<a [routerLink]="menu().path" routerLinkActive="underline" [target]="target()" [ngClass]="classes">
+<a
+    [routerLink]="menu().path"
+    routerLinkActive="underline"
+    [target]="target()"
+    [ngClass]="classes"
+>
     @if (iconLeft) {
-        <fa-icon class="mr-1" [icon]="iconLeft"></fa-icon>
+    <fa-icon class="mr-1" [icon]="iconLeft"></fa-icon>
     }
     <span>{{ menu().text }}</span>
     @if (iconRight) {
-        <fa-icon class="ml-1" [icon]="iconRight"></fa-icon>
+    <fa-icon class="ml-1" [icon]="iconRight"></fa-icon>
     }
 </a>

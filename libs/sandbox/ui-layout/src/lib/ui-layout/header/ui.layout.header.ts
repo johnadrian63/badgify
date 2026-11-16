@@ -1,7 +1,8 @@
 import { Component, inject, OnInit } from "@angular/core";
-import { RouterModule } from "@angular/router";
+import { RouterLink } from "@angular/router";
 
 import { navigationData } from "./navigation/navigation.data";
+import { profileNavigationData } from "./navigation/profile.navigation.data";
 import { UiLayoutHeaderNavigationHorizontalMain } from "./navigation/horizontal/main/ui.layout.header.navigation.horizontal.main";
 import { UiLayoutHeaderNavigationHorizontalUtility } from "./navigation/horizontal/utility/ui.layout.header.navigation.horizontal.utility";
 import { UiLayoutHeaderNavigationHorizontalMainService } from "./navigation/horizontal/main/ui.layout.header.navigation.horizontal.main.service";
@@ -12,7 +13,7 @@ import { UiLayoutHeaderNavigationHorizontalUtilityService } from "./navigation/h
     templateUrl: "./ui.layout.header.html",
     styleUrl: "./ui.layout.header.css",
     imports: [
-        RouterModule,
+        RouterLink,
         UiLayoutHeaderNavigationHorizontalMain,
         UiLayoutHeaderNavigationHorizontalUtility
     ],
@@ -27,6 +28,7 @@ export class UiLayoutHeader implements OnInit {
 
     public ngOnInit(): void {
         this.navigationHorizontalMainService.menus.set(navigationData);
-        this.navigationHorizontalUtilityService.menus.set(navigationData);
+
+        this.navigationHorizontalUtilityService.menus.set(profileNavigationData);
     }
 }

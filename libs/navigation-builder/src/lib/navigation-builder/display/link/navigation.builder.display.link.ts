@@ -4,8 +4,8 @@ import { RouterLink, RouterLinkActive } from "@angular/router";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { FaIconComponent } from "@fortawesome/angular-fontawesome";
 
-import { NavigationBuilderDisplay } from "../navigation.builder.display";
 import { IMenuItemTarget } from "../../navigation.builder.model";
+import { NavigationBuilderDisplay } from "../navigation.builder.display";
 
 @Component({
     selector: "lib-navigation-builder-display-link",
@@ -13,8 +13,8 @@ import { IMenuItemTarget } from "../../navigation.builder.model";
     imports: [RouterLink, RouterLinkActive, NgClass, FaIconComponent]
 })
 export class NavigationBuilderDisplayLink extends NavigationBuilderDisplay {
-    public readonly iconRight: IconDefinition | null = null;
-    public readonly iconLeft: IconDefinition | null = null;
+    public iconRight: IconDefinition | null = null;
+    public iconLeft: IconDefinition | null = null;
 
     public readonly target = model<IMenuItemTarget>("_self");
 }
