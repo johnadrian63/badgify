@@ -36,6 +36,7 @@ export class LayoutBuilderStyleRendererComponent {
 
     private readonly layoutStyleContextService: LayoutBuilderContextService = inject<LayoutBuilderContextService>(LayoutBuilderContextService);
     private readonly vcr: ViewContainerRef = inject<ViewContainerRef>(ViewContainerRef);
+    private previousLayout: keyof typeof LayoutBuilderStyle | null = null;
 
     constructor() {
         effect(() => {
@@ -50,23 +51,32 @@ export class LayoutBuilderStyleRendererComponent {
     private initialize(data: Data): void {
         let layout = LayoutBuilderStyle.NO_LAYOUT;
 
+
         layout = data["layout"];
 
         const component = layoutBuilderStyleMapper.get(layout);
 
         console.log(`using layout "${layout}"`);
 
-        this.vcr.clear();
+        console.log(data);
 
-        if (component) {
-            const componentRef = this.vcr.createComponent(component);
-            const componentInstance = componentRef.instance;
+        if (this.previousLayout != layout) {
+            this.vcr.clear();
 
-            componentInstance.data = data;
+            this.previousLayout = layout;
 
-            componentRef.changeDetectorRef.detectChanges();
+            console.error("destroying layout", this.previousLayout);
+
+            if (component) {
+                const componentRef = this.vcr.createComponent(component);
+                const componentInstance = componentRef.instance;
+
+                componentInstance.data = data;
+
+                componentRef.changeDetectorRef.detectChanges();
+            }
+
+            this.layoutStyleContextService.initialize();
         }
-
-        this.layoutStyleContextService.initialize();
     }
 }
