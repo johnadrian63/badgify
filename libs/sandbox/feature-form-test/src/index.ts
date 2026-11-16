@@ -1,1 +1,1 @@
-export * from "./lib/feature-form-test/feature-form-test";
+export * from "./lib";

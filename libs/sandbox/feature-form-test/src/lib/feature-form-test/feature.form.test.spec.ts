@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { FeatureFormTest } from "./feature-form-test";
+import { FeatureFormTest } from "./feature.form.test";
 
 describe("FeatureFormTest", () => {
     let component: FeatureFormTest;

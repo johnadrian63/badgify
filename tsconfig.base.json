@@ -65,11 +65,11 @@
             "@org/sandbox/feature-table-test": [
                 "./libs/sandbox/feature-table-test/src/index.ts"
             ],
-            "@org/navigation-builder": [
-                "./libs/navigation-builder/src/index.ts"
-            ],
             "@org/sandbox/feature-error-page": [
                 "./libs/sandbox/feature-error-page/src/index.ts"
+            ],
+            "@org/navigation-builder": [
+                "./libs/navigation-builder/src/index.ts"
             ],
             "@org/cms/ui-layout": [
                 "./libs/cms/ui-layout/src/index.ts"
