@@ -72,7 +72,7 @@
                 "./libs/sandbox/feature-error-page/src/index.ts"
             ],
             "@org/cms/cms-ui-layout": [
-                "./libs/cms/cms-ui-layout/src/index.ts"
+                "./libs/cms/ui-layout/src/index.ts"
             ]
         }
     }

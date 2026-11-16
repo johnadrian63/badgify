@@ -1,7 +1,7 @@
 {
     "name": "cms-ui-layout",
     "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "libs/cms/cms-ui-layout/src",
+    "sourceRoot": "libs/cms/ui-layout/src",
     "prefix": "lib",
     "projectType": "library",
     "tags": [

@@ -4,7 +4,7 @@ import angular from "@analogjs/vite-plugin-angular";
 
 export default defineConfig(() => ({
     root: import.meta.dirname,
-    cacheDir: "../../../node_modules/.vite/libs/cms/cms-ui-layout",
+    cacheDir: "../../../node_modules/.vite/libs/cms/ui-layout",
     resolve: {
         tsconfigPaths: true,
     },
@@ -24,7 +24,7 @@ export default defineConfig(() => ({
         setupFiles: ["src/test-setup.ts"],
         reporters: ["default"],
         coverage: {
-            reportsDirectory: "../../../coverage/libs/cms/cms-ui-layout",
+            reportsDirectory: "../../../coverage/libs/cms/ui-layout",
             provider: "v8" as const,
         },
     },
