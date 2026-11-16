@@ -59,9 +59,6 @@
             "@org/sandbox/ui-layout": [
                 "./libs/sandbox/ui-layout/src/index.ts"
             ],
-            "@org/sandbox/feature-form-test": [
-                "./libs/sandbox/feature-form-test/src/index.ts"
-            ],
             "@org/sandbox/feature-table-test": [
                 "./libs/sandbox/feature-table-test/src/index.ts"
             ],
